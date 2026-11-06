@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "design-canvas",
+  "version": "0.1.0",
+  "description": "Explore project and one-off designs on a persistent canvas with labeled variations like 1a and 1b, pinned annotations, and revision history.",
+  "author": {
+    "name": "OstermanEric"
+  },
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Design Canvas",
+        "shortDescription": "Labeled designs, shared context",
+        "longDescription": "Start a one-off design board or load a local project. Compare labeled variations, pin annotations, and iterate on an exact rendering while keeping its revision history. Local storage; no API key needed.",
+        "developerName": "OstermanEric",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg",
+        "defaultPrompt": [
+          "Start a one-off design canvas.",
+          "Load my project into Design Canvas.",
+          "Iterate on rendering 1b."
+        ]
+      }
+    }
+  },
+  "repository": "https://github.com/OstermanEric/codex-design-canvas",
+  "homepage": "https://github.com/OstermanEric/codex-design-canvas"
+}

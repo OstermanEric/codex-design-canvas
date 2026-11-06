@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Design Canvas</title><style>/* STYLES */</style></head>
+<body>
+<div id="app">
+  <aside class="rail">
+    <a class="brand" href="#" aria-label="Design Canvas home"><span class="brand-mark">◈</span><span>Design Canvas<small>A shared place to explore.</small></span><span class="beta">LOCAL</span></a>
+    <button id="new-workspace" class="primary wide">＋ New workspace</button>
+    <div class="section-label">YOUR WORKSPACES</div><nav id="workspaces" aria-label="Workspaces"></nav>
+    <div class="rail-bottom"><span class="privacy-dot"></span> Saved on this computer<div id="connection">Connecting…</div></div>
+  </aside>
+  <main>
+    <header class="topbar"><div><div class="eyebrow" id="board-mode">YOUR DESIGN STUDIO</div><h1 id="board-title">Make room for an idea.</h1></div><div class="top-actions"><button id="project-info" class="quiet" hidden>Project context</button><button id="add-rendering" class="primary" disabled>＋ Add rendering</button></div></header>
+    <div class="toolbar"><div class="toolbar-left"><span id="rendering-count">0 renderings</span><span class="separator"></span><button id="compare" class="quiet">Compare selected</button><button id="show-all" class="quiet" hidden>Show all</button></div><div class="zoom-controls"><button id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-level">65%</span><button id="zoom-in" aria-label="Zoom in">＋</button><button id="fit" class="quiet">Fit</button></div></div>
+    <div class="workspace-body"><section id="viewport" aria-label="Design canvas"><div id="world-shell"><div id="world"></div></div><div id="empty-state"><div class="empty-symbol">◈</div><h2>Every direction deserves a name.</h2><p>Start a one-off board or load a project.<br>Explore 1a, try 1b, and keep the conversation precise.</p><button id="empty-new" class="primary">Create your first workspace</button></div></section><aside id="inspector"><div class="inspector-empty"><span>↖</span><h3>Pick a direction.</h3><p>Select a rendering to see its revisions, leave a note, or continue in Codex.</p></div></aside></div>
+    <footer><span id="save-status">Local-first · No API key needed</span><span>Screen 1 → variations 1a, 1b · Each keeps its revision history</span></footer>
+  </main>
+</div>
+<dialog id="workspace-dialog"><form id="workspace-form"><div class="eyebrow">A FRESH CANVAS</div><h2>What are we exploring?</h2><label>Workspace name<input name="title" required maxlength="160" placeholder="An idea worth exploring" autofocus></label><div class="mode-picker"><label><input type="radio" name="mode" value="one-off" checked> One-off chat</label><label><input type="radio" name="mode" value="project"> Load a project</label></div><label id="project-path-field" hidden>Local project folder<input name="projectPath" placeholder="/Users/you/git/my-project"><small>Imports a file overview and README. Source files stay untouched.</small></label><div class="dialog-actions"><button type="button" data-close>Cancel</button><button type="submit" class="primary">Create workspace</button></div></form></dialog>
+<dialog id="render-dialog"><form id="render-form"><div class="eyebrow">ADD TO THE BOARD</div><h2>A new direction.</h2><label>Rendering name<input name="title" required maxlength="160" placeholder="Home — balance first"></label><label>Screen<select name="variantOf" id="variant-of"><option value="">New screen (next number)</option></select></label><label>Design file<input name="file" type="file" accept=".html,.htm,.png,.jpg,.jpeg,.webp" required><small>Self-contained HTML or PNG, JPEG, WebP. Codex can also add designs directly.</small></label><div class="field-pair"><label>Width<input name="width" type="number" value="390" min="200" max="1920" required></label><label>Height<input name="height" type="number" value="844" min="200" max="2400" required></label></div><div class="dialog-actions"><button type="button" data-close>Cancel</button><button type="submit" class="primary">Add rendering</button></div></form></dialog>
+<dialog id="annotation-dialog"><form id="annotation-form"><div class="eyebrow" id="annotation-target">PIN A NOTE</div><h2>What should change?</h2><label>Your annotation<textarea name="text" required maxlength="10000" rows="4" placeholder="Give this balance more breathing room…"></textarea></label><div class="dialog-actions"><button type="button" data-close>Cancel</button><button type="submit" class="primary">Pin annotation</button></div></form></dialog>
+<dialog id="context-dialog"><div class="eyebrow">PROJECT CONTEXT</div><h2 id="context-title"></h2><p id="context-path"></p><pre id="context-content"></pre><div class="dialog-actions"><button data-close>Close</button></div></dialog>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+<script type="module">/* SCRIPT */</script>
+</body></html>

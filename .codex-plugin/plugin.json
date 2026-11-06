@@ -1,0 +1,31 @@
+{
+  "name": "design-canvas",
+  "version": "0.1.0",
+  "description": "A shared canvas with labeled screens, variations, annotations, and revision history.",
+  "author": {
+    "name": "OstermanEric"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "Design Canvas",
+    "shortDescription": "Labeled designs, shared context",
+    "longDescription": "Explore project and one-off designs locally with stable labels like 1a and 1b, annotations and revision history.",
+    "developerName": "OstermanEric",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "defaultPrompt": [
+      "Start a one-off design canvas.",
+      "Load my project into Design Canvas.",
+      "Iterate on rendering 1b."
+    ]
+  },
+  "repository": "https://github.com/OstermanEric/codex-design-canvas",
+  "homepage": "https://github.com/OstermanEric/codex-design-canvas"
+}

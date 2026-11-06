@@ -1,0 +1,32 @@
+{
+  "name": "codex-design-canvas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "2.0.4",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node src/http.mjs",
+    "mcp": "node src/mcp.mjs",
+    "test": "node --test test/*.test.mjs",
+    "demo": "node dist/demo.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OstermanEric/codex-design-canvas.git"
+  },
+  "homepage": "https://github.com/OstermanEric/codex-design-canvas",
+  "bugs": {
+    "url": "https://github.com/OstermanEric/codex-design-canvas/issues"
+  }
+}

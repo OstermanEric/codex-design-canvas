@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+data/
+test-results/
+*.log
+.env
+.env.*
+!.env.example
+viewer.json
+boards/
+*.pem
+*.key
